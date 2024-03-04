@@ -397,7 +397,7 @@ var levels = {
 	// Datos de nivel
 	data:[
 	 {   // Primer nivel 
-		foreground:'fr_space',
+		foreground:'fg_purple_space',
 		background:'bg_space',
 		entities:[
 			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
@@ -416,7 +416,7 @@ var levels = {
 		]
 	 },
 		{   // Segundo nivel
-			foreground:'fr_space',
+			foreground:'bg_purple_space',
 			background:'bg_space',
 			entities:[
 				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
