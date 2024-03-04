@@ -396,8 +396,8 @@ var levels = {
 	// Datos de nivel
 	data:[
 	 {   // Primer nivel 
-		foreground:'desert-foreground',
-		background:'clouds-background',
+		foreground:'fr_space',
+		background:'bg_space',
 		entities:[
 			{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
 			{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
@@ -411,12 +411,12 @@ var levels = {
 			{type:"villain", name:"fries", x:620,y:205,calories:420},				
 
 			{type:"hero", name:"orange",x:80,y:405},
-			{type:"hero", name:"apple",x:140,y:405},
+			{type:"hero", name:"cat",x:140,y:405},
 		]
 	 },
 		{   // Segundo nivel
-			foreground:'desert-foreground',
-			background:'clouds-background',
+			foreground:'fr_space',
+			background:'bg_space',
 			entities:[
 				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
 				{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
@@ -437,7 +437,7 @@ var levels = {
 
 				{type:"hero", name:"strawberry",x:30,y:415},
 				{type:"hero", name:"orange",x:80,y:405},
-				{type:"hero", name:"apple",x:140,y:405},
+				{type:"hero", name:"cat",x:140,y:405},
 			]
 		}
 	],
@@ -537,7 +537,7 @@ var entities = {
 			friction:0.5,
 			restitution:0.6,	
 		},
-		"apple":{
+		"cat":{
 			shape:"circle",
 			radius:25,
 			density:1.5,
