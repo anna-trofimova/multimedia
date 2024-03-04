@@ -51,7 +51,7 @@ var game = {
 	
 		//"Kindergarten" by Gurdonark
 		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
-		game.backgroundMusic = loader.loadSound('audio/gurdonark-kindergarten');
+		game.backgroundMusic = loader.loadSound('audio/technogeek');
 
 		game.slingshotReleasedSound = loader.loadSound("audio/released");
 		game.bounceSound = loader.loadSound('audio/bounce');
@@ -313,6 +313,7 @@ var game = {
 		game.context.drawImage(game.currentLevel.backgroundImage,game.offsetLeft/4,0,640,480,0,0,640,480);
 		game.context.drawImage(game.currentLevel.foregroundImage,game.offsetLeft,0,640,480,0,0,640,480);
 
+
 		// Dibujar la honda
 		game.context.drawImage(game.slingshotImage,game.slingshotX-game.offsetLeft,game.slingshotY);
 
@@ -404,13 +405,13 @@ var levels = {
 
 			{type:"block", name:"wood", x:520,y:380,angle:90,width:100,height:25},
 			{type:"block", name:"glass", x:520,y:280,angle:90,width:100,height:25},								
-			{type:"villain", name:"burger",x:520,y:205,calories:590},
+			{type:"villain", name:"mer1",x:520,y:205,calories:590},
 
 			{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
 			{type:"block", name:"glass", x:620,y:280,angle:90,width:100,height:25},								
-			{type:"villain", name:"fries", x:620,y:205,calories:420},				
+			{type:"villain", name:"planet-generic05-000.export", x:620,y:205,calories:420},				
 
-			{type:"hero", name:"orange",x:80,y:405},
+			{type:"hero", name:"cat3",x:80,y:405},
 			{type:"hero", name:"cat",x:140,y:405},
 		]
 	 },
@@ -431,12 +432,12 @@ var levels = {
 				{type:"block", name:"glass", x:770,y:255,angle:90,width:100,height:25},
 				{type:"block", name:"wood", x:720,y:192.5,width:100,height:25},	
 
-				{type:"villain", name:"burger",x:715,y:155,calories:590},
-				{type:"villain", name:"fries",x:670,y:405,calories:420},
+				{type:"villain", name:"mer1",x:715,y:155,calories:590},
+				{type:"villain", name:"planet-generic05-000.export.",x:670,y:405,calories:420},
 				{type:"villain", name:"sodacan",x:765,y:400,calories:150},
 
 				{type:"hero", name:"strawberry",x:30,y:415},
-				{type:"hero", name:"orange",x:80,y:405},
+				{type:"hero", name:"cat3",x:80,y:405},
 				{type:"hero", name:"cat",x:140,y:405},
 			]
 		}
@@ -511,7 +512,7 @@ var entities = {
 			friction:1.5,
 			restitution:0.2,	
 		},
-		"burger":{
+		"mer1":{
 			shape:"circle",
 			fullHealth:40,
 			radius:25,
@@ -528,7 +529,7 @@ var entities = {
 			friction:0.5,
 			restitution:0.7,	
 		},
-		"fries":{
+		"planet-generic05-000.export":{
 			shape:"rectangle",
 			fullHealth:50,
 			width:40,
@@ -544,7 +545,7 @@ var entities = {
 			friction:0.5,
 			restitution:0.4,	
 		},
-		"orange":{
+		"cat3":{
 			shape:"circle",
 			radius:25,
 			density:1.5,
