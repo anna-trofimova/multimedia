@@ -44,14 +44,14 @@ var game = {
 	init: function(){
 		// Inicialización de objetos   
 		levels.init();
+		settings.init();
 		loader.init();
 		mouse.init();
 
 		// Cargar todos los efectos de sonido y música de fondo
-	
 		//"Kindergarten" by Gurdonark
 		//http://ccmixter.org/files/gurdonark/26491 is licensed under a Creative Commons license
-		game.backgroundMusic = loader.loadSound('audio/technogeek');
+		game.backgroundMusic = loader.loadSound(settings.soundUrl);
 
 		game.slingshotReleasedSound = loader.loadSound("audio/released");
 		game.bounceSound = loader.loadSound('audio/bounce');
@@ -93,6 +93,10 @@ var game = {
 	showLevelScreen:function(){
 		$('.gamelayer').hide();
 		$('#levelselectscreen').show('slow');
+	},
+	showSettingScreen:function(){
+		$('.gamelayer').hide();
+		$('#gameSettingScreen').show('slow');
 	},
 	restartLevel:function(){
 		window.cancelAnimationFrame(game.animationFrame);		
@@ -393,6 +397,29 @@ var game = {
 
 }
 
+var settings = {
+	
+	soundUrl:('audio/technogeek'),
+	data:[
+		{   // Primer nivel 
+		   foreground:'fg_purple_space',
+		   background:'bg_space',
+		  
+		},
+	],
+
+	// Inicializar pantalla de selección de nivel
+	init:function(){
+		
+	},
+
+	changeSound:function(selected){
+		game.backgroundMusic = loader.loadSound(selected)
+		game.startBackgroundMusic();
+	}
+
+	
+}
 var levels = {
 	// Datos de nivel
 	data:[
@@ -416,7 +443,7 @@ var levels = {
 		]
 	 },
 		{   // Segundo nivel
-			foreground:'bg_purple_space',
+			foreground:'fg_purple_space',
 			background:'bg_space',
 			entities:[
 				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},

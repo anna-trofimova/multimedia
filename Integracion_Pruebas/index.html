@@ -22,9 +22,17 @@
 			
 			<div id="gamestartscreen" class="gamelayer">
 				<img src="images/icons/play.png" alt="Play Game" onclick = "game.showLevelScreen();"><br>
-				<img src="images/icons/settings.png" alt="Settings">
+				<img src="images/icons/settings.png" alt="Settings" onclick = "game.showSettingScreen();">
 			</div>
 			
+			<div id="gameSettingScreen" class="gamelayer">
+				<div>
+					<p id="changeSettings">Change settings</p>
+					<p id="soundOne" onclick="settings.changeSound('audio/technogeek');"><img src="images/icons/prev.png"> Technogeek</p>				
+					<p id="soundTwo" onclick="settings.changeSound('audio/gurdonark-kindergarten');"><img src="images/icons/next.png"> gurdonark-kindergarten </p>				
+				</div>
+			</div>
+
 			<div id="levelselectscreen" class="gamelayer">
 			</div>
 			
