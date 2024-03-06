@@ -241,6 +241,12 @@ var game = {
 		if (game.mode == "load-next-hero"){
 			game.countHeroesAndVillains();
 
+
+			if (game.score < 0) {
+				game.mode = "level-failure"
+				return
+			}
+
 			// Comprobar si algún villano está vivo, si no, termine el nivel (éxito)
 			if (game.villains.length == 0){
 				game.mode = "level-success";
@@ -432,7 +438,7 @@ var levels = {
 
 			{type:"block", name:"wood", x:520,y:380,angle:90,width:100,height:25},
 			{type:"block", name:"glass", x:520,y:280,angle:90,width:100,height:25},								
-			{type:"villain", name:"mer1",x:520,y:205,calories:590},
+			{type:"villain", name:"mer1",x:520,y:205,calories:-590},
 
 			{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
 			{type:"block", name:"glass", x:620,y:280,angle:90,width:100,height:25},								
@@ -462,6 +468,33 @@ var levels = {
 				{type:"villain", name:"mer1",x:715,y:155,calories:590},
 				{type:"villain", name:"planet-generic05-000.export.",x:670,y:405,calories:420},
 				{type:"villain", name:"sodacan",x:765,y:400,calories:150},
+
+				{type:"hero", name:"strawberry",x:30,y:415},
+				{type:"hero", name:"cat3",x:80,y:405},
+				{type:"hero", name:"cat",x:140,y:405},
+			]
+		},
+		{   //  Tercer nivel
+			foreground:'fg_purple_space',
+			background:'bg_space',
+			entities:[
+				{type:"ground", name:"dirt", x:500,y:440,width:1000,height:20,isStatic:true},
+				{type:"ground", name:"wood", x:185,y:390,width:30,height:80,isStatic:true},
+	
+				{type:"block", name:"wood", x:820,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"wood", x:720,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:670,y:317.5,width:100,height:25},
+				{type:"block", name:"glass", x:770,y:317.5,width:100,height:25},				
+
+				{type:"block", name:"glass", x:670,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"glass", x:770,y:255,angle:90,width:100,height:25},
+				{type:"block", name:"wood", x:720,y:192.5,width:100,height:25},	
+
+				{type:"villain", name:"mer1",x:715,y:155,calories:590},
+				{type:"villain", name:"planet-generic05-000.export.",x:670,y:405,calories:420},
+				{type:"villain", name:"sodacan",x:765,y:400,calories:150},
+				{type:"villain", name:"boomb",x:765,y:400,calories:-1000},
 
 				{type:"hero", name:"strawberry",x:30,y:415},
 				{type:"hero", name:"cat3",x:80,y:405},
@@ -570,7 +603,7 @@ var entities = {
 			radius:25,
 			density:1.5,
 			friction:0.5,
-			restitution:0.4,	
+			restitution:0.4,
 		},
 		"cat3":{
 			shape:"circle",
