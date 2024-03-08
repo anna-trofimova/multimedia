@@ -437,7 +437,7 @@ var levels = {
 
 			{type:"block", name:"wood", x:520,y:380,angle:90,width:100,height:25},
 			{type:"block", name:"glass", x:520,y:280,angle:90,width:100,height:25},								
-			{type:"villain", name:"mer1",x:520,y:205,calories:-590},
+			{type:"villain", name:"mer1",x:520,y:205,calories:590},
 
 			{type:"block", name:"wood", x:620,y:380,angle:90,width:100,height:25},
 			{type:"block", name:"glass", x:620,y:280,angle:90,width:100,height:25},								
@@ -468,7 +468,7 @@ var levels = {
 				{type:"villain", name:"planet-generic05-000.export.",x:670,y:405,calories:420},
 				{type:"villain", name:"sodacan",x:765,y:400,calories:150},
 
-				{type:"hero", name:"strawberry",x:30,y:415},
+				{type:"hero", name:"cat4",x:30,y:415},
 				{type:"hero", name:"cat3",x:80,y:405},
 				{type:"hero", name:"cat",x:140,y:405},
 			]
@@ -495,10 +495,10 @@ var levels = {
 
 				{type:"villain", name:"mer1",x:715,y:155,calories:590},
 				{type:"villain", name:"planet-generic05-000.export.",x:670,y:405,calories:420},
-				{type:"villain", name:"sodacan",x:765,y:400,calories:150},
+				{type:"villain", name:"earth",x:765,y:400,calories:150},
 				{type:"villain", name:"boomb",x:500,y:300,calories:-1000},
 
-				{type:"hero", name:"strawberry",x:30,y:415},
+				{type:"hero", name:"cat4",x:30,y:415},
 				{type:"hero", name:"cat3",x:80,y:405},
 				{type:"hero", name:"cat",x:140,y:405},
 			]
@@ -526,10 +526,10 @@ var levels = {
 
 				{type:"villain", name:"mer1",x:715,y:155,calories:590},
 				{type:"villain", name:"planet-generic05-000.export.",x:670,y:405,calories:420},
-				{type:"villain", name:"sodacan",x:765,y:400,calories:150},
+				{type:"villain", name:"earth",x:765,y:400,calories:150},
 				{type:"villain", name:"boomb",x:500,y:250,calories:-1000},
 
-				{type:"hero", name:"strawberry",x:30,y:415},
+				{type:"hero", name:"cat4",x:30,y:415},
 				{type:"hero", name:"cat3",x:80,y:405},
 				{type:"hero", name:"cat",x:140,y:405},
 			]
@@ -613,7 +613,7 @@ var entities = {
 			friction:0.5,
 			restitution:0.4,	
 		},
-		"sodacan":{
+		"earth":{
 			shape:"rectangle",
 			fullHealth:80,
 			width:40,
@@ -654,10 +654,10 @@ var entities = {
 			friction:0.5,
 			restitution:0.4,	
 		},
-		"strawberry":{
+		"cat4":{
 			shape:"circle",
-			radius:15,
-			density:2.0,
+			radius:25,
+			density:1.5,
 			friction:0.5,
 			restitution:0.4,	
 		},
