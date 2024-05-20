@@ -53,13 +53,13 @@
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
+                <a class="nav-link" href="index.html"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="furniture.html">Promotions</a>
+                <a class="nav-link" href="index.html">Promotions</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="index.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -84,7 +84,7 @@
     <section class="slider_section long_section">
       <div id="customCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" style ="background-image: url('images/tropical.jpg');">
             <div class="container ">
               <div class="row">
                 <div class="col-md-5">
@@ -113,69 +113,9 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="detail-box">
-                    <h1>
-                      The best Promotions!
-                    </h1>
-                    <p>
-                      Cheap sightseeing tours. Book with us and save your money for other adventures. 
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="detail-box">
-                    <h1>
-                      New Adventures
-                    </h1>
-                    <p>
-                      Book extreme paths!
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Contact Us
-                      </a>
-                      <a href="" class="btn2">
-                        About Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <ol class="carousel-indicators">
           <li data-target="#customCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel" data-slide-to="1"></li>
-          <li data-target="#customCarousel" data-slide-to="2"></li>
         </ol>
       </div>
     </section>
@@ -322,7 +262,7 @@
   <!-- end furniture section -->
 
 
-  <!-- about section -->
+  <!-- Fill your postal-->
 
   <section class="about_section layout_padding long_section">
     <div class="container">
@@ -336,11 +276,11 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                About Us
+                Fill your postal
               </h2>
             </div>
             <p>
-              Welcome to Travel Treasures! We are passionate travel enthusiasts dedicated to bringing you the best touristic promotions and unforgettable experiences. Our mission is to help you discover incredible destinations at unbeatable prices. Whether you're seeking adventure, relaxation, or cultural immersion, we have the perfect deal for you. Join us on a journey to explore the world's wonders, one promotion at a time
+              Now you will have the opportunity to fill and send your postal.
             </p>
             <a href="">
               Read More
@@ -351,9 +291,6 @@
     </div>
   </section>
 
-  <!-- end about section -->
-
-  <!-- contact section -->
   <section class="contact_section  long_section">
     <div class="container">
       <div class="row">
@@ -361,7 +298,7 @@
           <div class="form_container">
             <div class="heading_container">
               <h2>
-                Contact Us
+                Fill your postal
               </h2>
             </div>
             <form action="">
@@ -369,7 +306,7 @@
                 <input type="text" placeholder="Your Name" />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="Direction" />
               </div>
               <div>
                 <input type="email" placeholder="Email" />
@@ -377,6 +314,14 @@
               <div>
                 <input type="text" class="message-box" placeholder="Message" />
               </div>
+              
+              <div class="btn_box">
+                <button type="button" class="btn" onclick="document.getElementById('image').click();">Upload Image</button>
+                <input id="image" type="file" accept="image/*" style="display: none;" onchange="previewImage(event)" />
+              </div>
+              </br>
+              </br>
+              </br>
               <div class="btn_box">
                 <button>
                   SEND
@@ -387,9 +332,7 @@
         </div>
         <div class="col-md-6">
           <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
-            </div>
+            <img id="uploadedImage" src="#" alt="Uploaded Image" style="display: none;" />
           </div>
         </div>
       </div>
@@ -397,6 +340,17 @@
   </section>
   <!-- end contact section -->
 
+  <script>
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const output = document.getElementById('uploadedImage');
+        output.src = reader.result;
+        output.style.display = 'block';
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+  </script>
   <!-- info section -->
   <section class="info_section long_section">
 
@@ -405,7 +359,7 @@
         <a href="">
           <i class="fa fa-phone" aria-hidden="true"></i>
           <span>
-            Call : +34 000 111 222
+            Call : 600 600 600
           </span>
         </a>
         <a href="">
@@ -437,33 +391,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
-            <div class="info_post">
-              <h5>
-                INSTAGRAM FEEDS
-              </h5>
-              <div class="post_box">
-                <div class="img-box">
-                  <img src="images/f1.png" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="images/f2.png" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="images/f3.png" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="images/f4.png" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="images/f5.png" alt="">
-                </div>
-                <div class="img-box">
-                  <img src="images/f6.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
+          
           <div class="col-md-4">
             <div class="info_form">
               <h4>
